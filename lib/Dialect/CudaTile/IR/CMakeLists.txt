@@ -24,3 +24,8 @@ add_mlir_library(CudaTileDialect
   MLIRIR
   MLIRSideEffectInterfaces
 )
+
+# MSVC requires /bigobj for large translation units
+if(MSVC)
+  target_compile_options(obj.CudaTileDialect PRIVATE /bigobj)
+endif()
