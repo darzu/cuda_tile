@@ -4,3 +4,4 @@ $build = "$root\build"
 
 cmd /c "`"$vcvarsall`" x64 && cmake --build $build --target check-cuda-tile"
 exit $LASTEXITCODE
+
